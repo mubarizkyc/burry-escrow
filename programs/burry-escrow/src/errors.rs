@@ -10,5 +10,11 @@ pub enum EscrowErrorCode {
     #[msg("Switchboard feed exceeded provided confidence interval")]
     ConfidenceIntervalExceeded,
     #[msg("Current SOL price is not above Escrow unlock price.")]
-    SolPriceAboveUnlockPrice,
+    SolPriceBelowUnlockPrice,
+    #[msg("Feed account is not closed, must be closed to redeem with the withdraw_closed_feed_funds instruction.")]
+    FeedAccountIsNotClosed,
+    #[msg("Invalid withdrawal request")]
+    InvalidWithdrawalRequest,
+    #[msg("Insufficient funds")]
+    InsufficientFunds,
 }
